@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👨‍🚒 Herói das Chamas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #1a1a2e;
+            color: #eee;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #ff6b35;
+            text-align: center;
+        }
+        .cena {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #ff6b35;
+            margin-bottom: 25px;
+        }
+        .local {
+            font-weight: bold;
+            color: #ffd700;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        a {
+            display: block;
+            background: #e63946;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            text-align: center;
+            transition: background 0.2s;
+        }
+        a:hover {
+            background: #ff6b35;
+        }
+        .sucesso {
+            background: rgba(46, 204, 113, 0.1);
+            border-left: 4px solid #2ecc71;
+            color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🔥 Herói das Chamas 🔥</h1>
+
+<div class="cena">
+    <p><strong>Objetivo:</strong> Você é um bravo bombeiro. Sua missão é encontrar o cômodo onde ainda há uma pessoa presa dentro desta casa em chamas. Entre e salve-a!</p>
+    
+    <div class="local">📍 Você está na Rua — em frente à casa</div>
+    
+    <p>A fumaça sai pelas janelas. O fogo já começa a se espalhar. Você precisa agir rápido!</p>
+</div>
+
+<div class="opcoes">
+    <a href="#sala">🚪 Pela porta da frente</a>
+    <a href="#janelaatras">🪟 Pela janela dos fundos</a>
+</div>
+
+<br><hr><br>
+
+<!-- === SALA === -->
+<div class="cena" id="sala">
+    <div class="local">🛋️ Sala de Estar</div>
+    <p>Há fumaça por toda parte. Você precisa seguir adiante.</p>
+</div>
+<div class="opcoes">
+    <a href="#rua">⬅️ Voltar à rua</a>
+    <a href="#corredor">➡️ Seguir para o corredor</a>
+    <a href="#cozinha">🍳 Entrar na cozinha</a>
+</div>
+
+<br><hr><br>
+
+<!-- === COZINHA === -->
+<div class="cena" id="cozinha">
+    <div class="local">🍳 Cozinha</div>
+    <p>O fogo está mais intenso aqui. Não há ninguém neste cômodo.</p>
+</div>
+<div class="opcoes">
+    <a href="#sala">⬅️ Voltar à sala</a>
+    <a href="#corredor">➡️ Ir para o corredor</a>
+</div>
+
+<br><hr><br>
+
+<!-- === CORREDOR === -->
+<div class="cena" id="corredor">
+    <div class="local">🚶 Corredor</div>
+    <p>O corredor é estreito. Há portas dos dois lados.</p>
+</div>
+<div class="opcoes">
+    <a href="#sala">⬅️ Voltar à sala</a>
+    <a href="#quarto1">🚪 Primeiro Quarto</a>
+    <a href="#quarto2">🚪 Segundo Quarto</a>
+    <a href="#banheiro">🚻 Banheiro</a>
+</div>
+
+<br><hr><br>
+
+<!-- === PRIMEIRO QUARTO === -->
+<div class="cena" id="quarto1">
+    <div class="local">🛏️ Primeiro Quarto</div>
+    <p>O quarto está vazio. A pessoa não está aqui.</p>
+</div>
+<div class="opcoes">
+    <a href="#corredor">⬅️ Voltar ao corredor</a>
+</div>
+
+<br><hr><br>
+
+<!-- === BANHEIRO === -->
+<div class="cena" id="banheiro">
+    <div class="local">🚻 Banheiro</div>
+    <p>Parece seguro, mas está vazio.</p>
+</div>
+<div class="opcoes">
+    <a href="#corredor">⬅️ Voltar ao corredor</a>
+</div>
+
+<br><hr><br>
+
+<!-- === JANELA DOS FUNDOS === -->
+<div class="cena" id="janelaatras">
+    <div class="local">🪟 Área dos Fundos</div>
+    <p>Você olha pela janela dos fundos, mas não consegue entrar por aqui. Precisa voltar.</p>
+</div>
+<div class="opcoes">
+    <a href="#rua">⬅️ Voltar à rua</a>
+</div>
+
+<br><hr><br>
+
+<!-- === SEGUNDO QUARTO — DESTINO FINAL === -->
+<div class="cena sucesso" id="quarto2">
+    <h2>✅ MISSÃO CONCLUÍDA!</h2>
+    <div class="local">🛏️ Segundo Quarto</div>
+    <p>Você encontrou a pessoa presa aqui! Com cuidado, você a guia para fora da casa em segurança.</p>
+    <p><strong>Parabéns, herói! 🎉👏</strong></p>
+    <p>Você cumpriu sua missão com coragem e determinação!</p>
+</div>
+<div class="opcoes">
+    <a href="#">🔄 Jogar Novamente</a>
+</div>
+
+<br><br>
+<p style="text-align:center; color:#888; font-size:0.9em;">Clique nas opções para navegar</p>
+
+</body>
+</html>
